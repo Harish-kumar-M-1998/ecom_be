@@ -9,9 +9,10 @@ const app = express();
 
 // Middleware
 app.use(cors({
-    origin: "https://e-com-harsih.netlify.app/",
-    credentials: true
-}));
+    origin: 'https://e-com-harsih.netlify.app', // Allow this origin
+    methods: 'GET,POST,PUT,DELETE', // Allowed HTTP methods
+    credentials: true, // Allow credentials if needed
+  }));
 app.use(express.json());
 
 // Connect to MongoDB
